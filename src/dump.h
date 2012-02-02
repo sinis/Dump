@@ -20,6 +20,8 @@ public:
 private:
     static Dump *_instance;
     sf::RenderWindow *_window;
+    std::string _title;
+    std::string _version;
 };
 
 #endif // _DUMP_H_

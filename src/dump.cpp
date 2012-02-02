@@ -1,6 +1,7 @@
 // Implementacja klasy Dump.
 
 #include "dump.h"
+#include "settings.h"
 
 // Singleton
 Dump *Dump::_instance = 0;
@@ -23,8 +24,17 @@ void Dump::Destroy()
 
 // Konstruktor i destruktor
 Dump::Dump():
-_window(new sf::RenderWindow)
+    _window(new sf::RenderWindow),
+    _title("Dump"),
+    _version("v0.1")
 {
+    Settings *s = Settings::Create();
+    s->Load();
+    if (!s->AreLoaded())
+        s->SetToDefaults();
+    _window->Create(sf::VideoMode(s->GetScreenWidth(), s->GetScreenHeight(), 32), (_title + ' ') + _version);
+    // TODO:
+    // Obsługa fullscreena.
 }
 
 Dump::~Dump()
@@ -36,10 +46,6 @@ Dump::~Dump()
 int Dump::Run()
 {
     sf::Event event;
-
-    // TODO:
-    // Dane dla sf::Window::Create() powinny być ładowane z ustawień.
-    _window->Create(sf::VideoMode(640, 480, 32), "Dump");
 
     while (_window->IsOpen())
     {
