@@ -1,5 +1,5 @@
 // Dump
-// G³ówna klasa gry. Zawiera pêtlê komunikatów.
+// GÅ‚Ã³wna klasa gry. Zawiera pÄ™tlÄ™ komunikatÃ³w.
 
 #ifndef _DUMP_H_
 #define _DUMP_H_

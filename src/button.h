@@ -26,7 +26,7 @@ public:
     void SetPosition(float x, float y) { _text->SetPosition(x, y); }
 
     State HandleMouse();
-    void Draw(sf::RenderWindow &window) { window.Draw(*_text); };
+    void Draw(sf::RenderWindow &window) { window.Draw(*_text); }
 
 private:
     int _id;

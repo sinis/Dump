@@ -1,5 +1,5 @@
 // Screen
-// Abstrakcyjna klasa bazowa dla kaødego ekranu gry.
+// Abstrakcyjna klasa bazowa dla ka≈ºdego ekranu gry.
 
 #ifndef _SCREEN_H_
 #define _SCREEN_H_

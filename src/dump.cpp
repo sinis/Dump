@@ -32,13 +32,13 @@ Dump::~Dump()
     delete _window;
 }
 
-// Pêtla komunikatów
+// PÄ™tla komunikatÃ³w
 int Dump::Run()
 {
     sf::Event event;
 
     // TODO:
-    // Dane dla sf::Window::Create() powinny byæ ³adowane z ustawieñ.
+    // Dane dla sf::Window::Create() powinny byÄ‡ Å‚adowane z ustawieÅ„.
     _window->Create(sf::VideoMode(640, 480, 32), "Dump");
 
     while (_window->IsOpen())
