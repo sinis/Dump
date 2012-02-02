@@ -13,6 +13,7 @@ class Dump
 public:
     static Dump *Create();
     static void Destroy();
+    static sf::RenderWindow *GetWindow() { return Create()->_window; }
 
     int Run();
 
