@@ -28,5 +28,6 @@ Button::State Button::HandleMouse()
         else
             return MouseOver;
     }
+    _text->SetStyle(sf::Text::Regular);
     return None;
 }
